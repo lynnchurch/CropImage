@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AndroidImageZoomCrop</string>
+    <string name="get_pictrue">入力</string>
+    <string-array name="modes">
+        <item>写真</item>
+        <item>アルバムから選びます</item>
+    </string-array>
+</resources>

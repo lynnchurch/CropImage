@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AndroidImageZoomCrop</string>
+    <string name="get_pictrue">Input Image</string>
+    <string-array name="modes">
+        <item>Capture</item>
+        <item>Choose From Album</item>
+    </string-array>
+</resources>

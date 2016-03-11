@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AndroidImageZoomCrop</string>
+    <string name="get_pictrue">获取照片</string>
+    <string-array name="modes">
+        <item>拍照</item>
+        <item>从相册中选择</item>
+    </string-array>
+</resources>
