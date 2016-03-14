@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -26,6 +27,7 @@ public class CropActivity extends AppCompatActivity
     PhotoView mPhotoView;
     CropOverlayView mCropOverlayView;
     RadioGroup rg_ratio;
+    Button btn_rotate;
     private Bitmap mBitmap;
     private boolean mCropCircleImage;
 
@@ -53,6 +55,7 @@ public class CropActivity extends AppCompatActivity
         mPhotoView = (PhotoView) findViewById(io.togoto.imagezoomcrop.R.id.iv_photo);
         mCropOverlayView = (CropOverlayView) findViewById(io.togoto.imagezoomcrop.R.id.crop_overlay);
         rg_ratio = (RadioGroup) findViewById(R.id.rg_ratio);
+        btn_rotate=(Button)findViewById(R.id.btn_rotate);
         rg_ratio.setVisibility(mCropCircleImage ? View.GONE : View.VISIBLE);
         mCropOverlayView.setCropCircle(mCropCircleImage);
         BitmapDrawable drawable = new BitmapDrawable(getResources(), mBitmap);
@@ -93,6 +96,14 @@ public class CropActivity extends AppCompatActivity
                 }
                 mPhotoView.reset();
                 mPhotoView.setMinimumScaleToFit();
+            }
+        });
+        btn_rotate.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                mPhotoView.setRotationBy(-90);
             }
         });
     }
